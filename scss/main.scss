@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.3em;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(66, 66, 66); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(156, 156, 156); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+}
+
+
+.showmodule{
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: inline-block;
+}
+.flex{
+    display: flex;
+}
+.container{
+    max-width: 1140px;
+    margin: 0px auto;
+}//Defult Css End
+
+
+//Custom CSS
+.header{
+    background: #000;
+}
+.navbar{
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .brand-area{
+        img{
+            max-width: 200px;
+        }
+    }
+
+    .avatar{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 15px;
+        align-items: center;
+        img{
+            max-width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            object-fit: cover center;
+        }
+    }
+}//Navbar End
+
+.main{
+    background: #1a1a1a;
+    padding: 10px 0px;
+
+    .course-area{
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: start;
+        padding: 30px 0px;
+    
+    
+        .milestones-details{
+            flex-basis: 400px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            img{
+                max-width: 100%;
+                border-radius: 7px;
+                height: auto;
+            }
+            .title{
+                font-size: 24px;
+                margin: 10px 0px;
+            }
+            .description{
+                font-size: 16px;
+            }
+        }
+        .course-milestones{
+            flex-basis: 250px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            background-color: #000;
+            padding: 15px;
+            max-height: 500px;
+            overflow: auto;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            // scrollbar-color: rgb(238, 238, 238) rgb(71, 71, 71);
+            // scrollbar-width: thin;
+            border-radius: 7px;
+            
+            &:hover{
+                &::-webkit-scrollbar-thumb {
+                    background: rgb(156, 156, 156); 
+                
+                }
+            }
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px rgb(66, 66, 66); 
+                background: rgb(51, 51, 51);
+                border-radius: 10px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgb(51, 51, 51);
+                border-radius: 10px;
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #ffffff; 
+            }
+
+            .milestone{
+                padding: 10px 0px;
+                .flex{
+                    p{
+                        padding: 0px 0px 5px 0px;
+                        cursor: pointer;
+                    }
+                }
+
+
+                .hidden_panel{
+                    margin-top: 10px;
+                    margin-left: 25px;
+                    transition: all 0.7s;
+                    max-height: 0px;
+                    overflow: hidden;
+
+                    .module{
+                        margin-top: 15px;
+
+                    }
+                  
+
+                }//End Hidden Panel
+                .showmodule{
+                    max-height: 300px;
+                    overflow: auto;
+                    scrollbar-width: 5px;
+
+                    &:hover{
+                        &::-webkit-scrollbar-thumb {
+                            background: rgb(156, 156, 156); 
+                        
+                        }
+                    }
+                    &::-webkit-scrollbar {
+                        width: 7px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 5px rgb(66, 66, 66); 
+                        background: rgb(51, 51, 51);
+                        border-radius: 10px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        background: rgb(51, 51, 51);
+                        border-radius: 10px;
+                    }
+                    
+                    /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #ffffff; 
+                    }
+
+                }
+                
+
+            }//End Milestone
+
+
+        }//End Course Milestone
+
+
+
+
+    }// Course Area End
+}
+
+//========Responsive
+
+@media (max-width: 1180px) {
+    .container {
+      padding: 0px 15px;
+    }
+    .navbar {
+        padding: 15px 0px;
+    }
+  }

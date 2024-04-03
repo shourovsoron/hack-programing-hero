@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3em;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(66, 66, 66);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(156, 156, 156);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+.showmodule {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+.header {
+  background: #000;
+}
+
+.navbar {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .brand-area img {
+  max-width: 200px;
+}
+.navbar .avatar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  gap: 15px;
+  align-items: center;
+}
+.navbar .avatar img {
+  max-width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -o-object-fit: cover center;
+     object-fit: cover center;
+}
+
+.main {
+  background: #1a1a1a;
+  padding: 10px 0px;
+}
+.main .course-area {
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: start;
+  padding: 30px 0px;
+}
+.main .course-area .milestones-details {
+  flex-basis: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.main .course-area .milestones-details img {
+  max-width: 100%;
+  border-radius: 7px;
+  height: auto;
+}
+.main .course-area .milestones-details .title {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+.main .course-area .milestones-details .description {
+  font-size: 16px;
+}
+.main .course-area .course-milestones {
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #000;
+  padding: 15px;
+  max-height: 500px;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 7px;
+  /* Handle on hover */
+}
+.main .course-area .course-milestones:hover::-webkit-scrollbar-thumb {
+  background: rgb(156, 156, 156);
+}
+.main .course-area .course-milestones::-webkit-scrollbar {
+  width: 7px;
+}
+.main .course-area .course-milestones::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(66, 66, 66);
+  background: rgb(51, 51, 51);
+  border-radius: 10px;
+}
+.main .course-area .course-milestones::-webkit-scrollbar-thumb {
+  background: rgb(51, 51, 51);
+  border-radius: 10px;
+}
+.main .course-area .course-milestones::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+.main .course-area .course-milestones .milestone {
+  padding: 10px 0px;
+}
+.main .course-area .course-milestones .milestone .flex p {
+  padding: 0px 0px 5px 0px;
+  cursor: pointer;
+}
+.main .course-area .course-milestones .milestone .hidden_panel {
+  margin-top: 10px;
+  margin-left: 25px;
+  transition: all 0.7s;
+  max-height: 0px;
+  overflow: hidden;
+}
+.main .course-area .course-milestones .milestone .hidden_panel .module {
+  margin-top: 15px;
+}
+.main .course-area .course-milestones .milestone .showmodule {
+  max-height: 300px;
+  overflow: auto;
+  scrollbar-width: 5px;
+  /* Handle on hover */
+}
+.main .course-area .course-milestones .milestone .showmodule:hover::-webkit-scrollbar-thumb {
+  background: rgb(156, 156, 156);
+}
+.main .course-area .course-milestones .milestone .showmodule::-webkit-scrollbar {
+  width: 7px;
+}
+.main .course-area .course-milestones .milestone .showmodule::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(66, 66, 66);
+  background: rgb(51, 51, 51);
+  border-radius: 10px;
+}
+.main .course-area .course-milestones .milestone .showmodule::-webkit-scrollbar-thumb {
+  background: rgb(51, 51, 51);
+  border-radius: 10px;
+}
+.main .course-area .course-milestones .milestone .showmodule::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+@media (max-width: 1180px) {
+  .container {
+    padding: 0px 15px;
+  }
+  .navbar {
+    padding: 15px 0px;
+  }
+}/*# sourceMappingURL=main.css.map */
