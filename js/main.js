@@ -100,6 +100,7 @@ function donemilestone(donemilestone, id ){
         }).forEach(function (element) {
             milestoneList.appendChild(element);
         });
+        hideCompleteTitle();
     }
 
     function reloadDoneList(Donelist) {
@@ -113,13 +114,20 @@ function donemilestone(donemilestone, id ){
         }).forEach(function (element) {
             Donelist.appendChild(element);
         });
+        hideCompleteTitle();
     }
     
-    let CompleteTitle = document.querySelector(".complete_title")
 
-    if(!Donelist.children.length == 0){
-        CompleteTitle.style.display = "inline-block"
+    function hideCompleteTitle(){
+        let CompleteTitle = document.querySelector(".complete_title")
+
+        if(Donelist.children.length == 0){
+            CompleteTitle.style.display = "none"
+        }else{
+            CompleteTitle.style.display = "inline-block"
+        }
     }
+    
 
 
     // let allchild = MilestoneList.childNodes;
