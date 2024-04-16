@@ -41,17 +41,17 @@ function openmilestone(clickedMilestone , id){
         activeelement.classList.remove("active");
 
     }
-        clickedMilestone.classList.toggle("active");
 
 
+    clickedMilestone.classList.toggle("active");
 
 
    if(!openmodule.classList.contains("showmodule") && openedModule){
     openedModule.classList.remove("showmodule");
    }
-    openmodule.classList.toggle("showmodule");
- 
 
+
+    openmodule.classList.toggle("showmodule");
 
     showModuleDetails(id);
 
@@ -61,31 +61,28 @@ function showModuleDetails(id){
     let MilestoneImage = document.querySelector(".MilestoneImage");
     let MilestoneTitle = document.querySelector(".title");
     let MilestoneDescription = document.querySelector(".description");
-
     MilestoneImage.src = milestonesData[id].image;
     MilestoneTitle.innerHTML = milestonesData[id].name;
     MilestoneDescription.innerHTML = milestonesData[id].description;
     MilestoneImage.style.opacity = "0";
 
 
-}
-let MilestoneImage = document.querySelector(".MilestoneImage");
-MilestoneImage.onload = function(){
-    MilestoneImage.style.opacity = "1";
+    MilestoneImage.onload = function(){
+        MilestoneImage.style.opacity = "1";
+    }
 }
 
 function donemilestone(donemilestone, id ){
-    let Donelist = document.querySelector(".donelist");
-    let  MilestoneList = document.querySelector(".course-milestones");
+    let Donelist = document.querySelector(".donelist"); //Get DoneList Container
+    let  MilestoneList = document.querySelector(".course-milestones"); //Get Milestone List Conatiner
     let  item = document.getElementById(id);
     if(donemilestone.checked){
         MilestoneList.removeChild(item);
         Donelist.appendChild(item);
-        reloadDoneList(Donelist);
+        reloadMilestone(Donelist);
 
     }else{
         MilestoneList.appendChild(item);
-        // Donelist.removeChild(item);
         reloadMilestone(MilestoneList);
     }
 
@@ -93,27 +90,14 @@ function donemilestone(donemilestone, id ){
 
         const elements = milestoneList.children;
         const elementsArray = Array.from(elements);
-        console.log(elementsArray);
     
        elementsArray.sort(function (a, b) {
           return Number(a.id) - Number(b.id);
         }).forEach(function (element) {
             milestoneList.appendChild(element);
         });
-        hideCompleteTitle();
-    }
 
-    function reloadDoneList(Donelist) {
 
-        const elements = Donelist.children;
-        const elementsArray = Array.from(elements);
-        console.log(elementsArray);
-    
-       elementsArray.sort(function (a, b) {
-          return Number(a.id) - Number(b.id);
-        }).forEach(function (element) {
-            Donelist.appendChild(element);
-        });
         hideCompleteTitle();
     }
     
@@ -127,30 +111,10 @@ function donemilestone(donemilestone, id ){
             CompleteTitle.style.display = "inline-block"
         }
     }
-    
-
-
-    // let allchild = MilestoneList.childNodes;
-    // var arrItem = Array.from(allchild);
-  
-    //       arrItem.sort(function (a, b) {
-              
-    //           var aId = parseInt(a.id);
-    //           var bId = parseInt(b.id);
-  
-    //           return aId - bId;
-              
-    //       }).forEach(function (logsss) {
-    //         MilestoneList.appendChild(logsss);
-    //       })
-
-    
 
 }
 
     
 let CompleteTitle = document.querySelector(".complete_title");
 CompleteTitle.style.display = "none";
-
-console.log(milestonesData);
 LoadMilestone();
